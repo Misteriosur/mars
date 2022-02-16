@@ -157,13 +157,16 @@ def form_sample():
                           </body>
                         </html>'''
     elif flask.request.method == 'POST':
-        print(flask.request.form['email'])
-        print(flask.request.form['password'])
-        print(flask.request.form['class'])
-        print(flask.request.form['file'])
-        print(flask.request.form['about'])
-        print(flask.request.form['accept'])
-        print(flask.request.form['sex'])
+        print(flask.request.form.get('name', None))
+        print(flask.request.form.get('second_name', None))
+        print(flask.request.form.get('class', None))
+        print(flask.request.form.get('file', None))
+        print(flask.request.form.get('profession1', None))
+        print(flask.request.form.get('profession2', None))
+        print(flask.request.form.get('profession3', None))
+        print(flask.request.form.get('about', None))
+        print(flask.request.form.get('accept', None))
+        print(flask.request.form.get('sex', None))
         return "Форма отправлена"
 
 
